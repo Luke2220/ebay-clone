@@ -2,4 +2,31 @@ body {
   background-color: #356e8f;
 }
 
+.container {
+  float: left;
+  margin-right: 20px;
+  width: 940px;
+  float: none;
+  margin: 0 auto;
+  background-color: rebeccapurple;
+  height: 300px;
+}
+
+.main {
+  float: left;
+  margin-right: 20px;
+  width: 620px;
+  background-color: royalblue;
+  height: 400px;
+}
+
+.sidebar {
+  float: left;
+  margin-right: 20px;
+  width: 300px;
+  margin-right: 0;
+  background-color: royalblue;
+  height: 300px;
+}
+
 /*# sourceMappingURL=ebay_clone.css.map */
