@@ -1,5 +1,41 @@
 body {
   background-color: #356e8f;
+  min-width: 960px;
+}
+
+.inblock {
+  display: inline-block;
+}
+
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  float: left;
+  margin: 0 5px;
+}
+
+nav {
+  padding-top: 10px;
+  min-height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+}
+nav img {
+  width: 25px;
+  height: 25px;
+}
+nav .right-nav {
+  float: right;
+}
+
+h2, form, p {
+  width: max-content;
 }
 
 .container {
@@ -7,26 +43,32 @@ body {
   margin-right: 20px;
   width: 940px;
   float: none;
+  display: block;
   margin: 0 auto;
   background-color: rebeccapurple;
-  height: 300px;
+  height: 960px;
 }
 
-.main {
-  float: left;
-  margin-right: 20px;
-  width: 620px;
-  background-color: royalblue;
-  height: 400px;
+.search-area {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+.search-area > * {
+  display: inline-block;
+}
+.search-area .search-box {
+  min-width: 300px;
+  min-height: 25px;
+  border: 2px solid rgba(128, 128, 128, 0.603);
 }
 
-.sidebar {
-  float: left;
-  margin-right: 20px;
-  width: 300px;
-  margin-right: 0;
-  background-color: royalblue;
-  height: 300px;
+.listings img {
+  max-width: 30%;
+  max-height: 30%;
+}
+.listings li {
+  width: 150px;
 }
 
 /*# sourceMappingURL=ebay_clone.css.map */

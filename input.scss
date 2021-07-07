@@ -1,8 +1,12 @@
 $ebay-color: #356e8f;
+$link-color: #1b1b1b;
+$btn-image-width:25px;
+$btn-image-height:25px;
 $column-width: 60px;
 $gutter-width: 20px;
 body{
     background-color: $ebay-color;
+    min-width:960px;
 }
 
 @mixin grid-unit($span) {
@@ -11,23 +15,87 @@ body{
     width: ($column-width * $span) + ($gutter-width * ($span - 1));
 }
 
+@mixin push($push){
+    position:relative;
+    left:$push;
+}
+@mixin pull($pull){
+    position:relative;
+    right:$pull;
+}
+
+.inblock{
+    display:inline-block;
+}
+
+a{
+color:$link-color;
+text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+li{
+    float:left;
+    margin:0 5px;
+  
+}
+
+nav {
+    padding-top: 10px;
+    min-height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+    
+    img{
+        width:$btn-image-width;
+        height:$btn-image-height;
+    }
+   .right-nav{   
+       float:right;
+   }
+
+}
+
+h2, form, p{
+    width:max-content;
+}
+
 .container{
     @include grid-unit(12);
     float:none;
+    display: block;
     margin:0 auto;  
     background-color: rebeccapurple;
-    height:300px;
+    height:960px;
 }
 
-.main{
-    @include grid-unit(8);
-    background-color: royalblue;
-    height: 400px;
+.search-area{
+   width:75%;
+    margin:auto;
+    text-align: center;
+   
+    > *{
+        display:inline-block;   
+    }   
+
+    .search-box{
+        min-width:300px;
+        min-height:25px;
+        border:2px solid rgba(128, 128, 128, 0.603);
+    }
 }
 
-.sidebar{
-    @include grid-unit(4);
-    margin-right: 0;
-    background-color: royalblue;
-    height: 300px;
+.listings{
+    img{
+        max-width:30%;
+        max-height:30%;
+    }
+
+    li{
+        width:150px;
+    }
 }
+
+
+
