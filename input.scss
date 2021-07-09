@@ -4,6 +4,7 @@ $btn-image-width:25px;
 $btn-image-height:25px;
 $column-width: 60px;
 $gutter-width: 20px;
+$banner-height:250px;
 body{
     background-color: $ebay-color;
     min-width:960px;
@@ -74,7 +75,7 @@ h2, form, p{
     display: block;
     margin:0 auto;  
     background-color: rebeccapurple;
-    height:960px;
+    max-height:max-content;
 }
 
 .search-area{
@@ -103,7 +104,8 @@ h2, form, p{
 }
 
 .listings{
-    
+    max-width:max-content;
+    margin:0 auto;
     margin-top:50px;
     h2{
         padding-right:20px;
@@ -111,6 +113,8 @@ h2, form, p{
     }
   
     ul{
+        max-width:max-content;
+        max-height:max-content;
         margin-top:20px;
         height:166px;
     }
@@ -158,6 +162,45 @@ h2, form, p{
         button{
             margin-top:10px;
         }
+    }
+}
+
+.banner{
+    min-height: $banner-height;
+   margin-top:200px;
+    .make-cash{
+        background-color: $ebay-color;
+        color:lighten($ebay-color, 30%);
+        font-weight: bold;
+        font-size: x-large;
+        @include grid-unit(4);
+        min-height:inherit;
+        margin:0;
+        padding-right:20px;
+
+        button{
+            background-color: rgba(0, 128, 0, 0);
+            border-width: 1px;
+            color:lighten($ebay-color, 30%);
+            min-width:50%;
+            height:33px;
+            font-weight: bold;
+            border-color: white;
+        }
+        p{
+            font-size:medium;
+        }
+        > *{
+            margin:10px;
+            margin-bottom: 30px;
+        }
+    }
+    .selling-img{
+        @include grid-unit(8);
+        margin:0;
+        float:right;
+        min-height:inherit;
+        background-image: url('https://www.planetconnection.org/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/g/mg-rx-77-2-guncannon-03.jpg');
     }
 }
 

@@ -1,0 +1,26 @@
+@mixin grid($columns){
+    display:grid;
+    grid-template-columns: repeat(1fr, $columns);
+}
+
+@mixin grid-col-start($start, $end)
+{
+    grid-column: $start / $end
+}
+
+.grid-4{
+   @include grid(4);
+}
+.grid-8{
+    @include grid(8);
+ }
+ .grid-12{
+    @include grid(12);
+ }
+
+.span-column{
+    @include grid-col-start(1, -1);
+}
+.span-row{
+    grid-row: 1 / -1;
+}
