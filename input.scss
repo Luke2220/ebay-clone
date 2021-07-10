@@ -50,6 +50,10 @@ li{
   
 }
 
+ul{
+    min-height:max-content;
+}
+
 nav {
     padding-top: 10px;
     min-height: 30px;
@@ -201,6 +205,19 @@ h2, form, p{
         float:right;
         min-height:inherit;
         background-image: url('https://www.planetconnection.org/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/m/g/mg-rx-77-2-guncannon-03.jpg');
+    }
+}
+
+footer{
+    p{
+        font-weight: bold;
+        font-size: large;
+    }
+    ul{
+        @include grid-unit(3);
+    }
+    li{
+        float:none;
     }
 }
 
