@@ -1,12 +1,13 @@
 $ebay-color: #356e8f;
 $link-color: #1b1b1b;
+$border-color: rgba(0, 0, 0, 0.466);
 $btn-image-width:25px;
 $btn-image-height:25px;
 $column-width: 60px;
 $gutter-width: 20px;
 $banner-height:250px;
 body{
-    background-color: $ebay-color;
+    background-color: white;
     min-width:960px;
 }
 
@@ -25,12 +26,18 @@ body{
     right:$pull;
 }
 
+button{
+    background-color:rgba(255, 255, 240, 0);
+    min-height:25px;
+    border-width: 1px;
+}
+
 .inblock{
     display:inline-block;
 }
 
 .right-border{
-    border-right:1px solid rgba(0, 0, 0, 0.466);
+    border-right:1px solid $border-color
 }
 .border-radius50{
     border-radius:50%;
@@ -57,7 +64,7 @@ ul{
 nav {
     padding-top: 10px;
     min-height: 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+    border-bottom: 1px solid $border-color;
     
     img{
         width:$btn-image-width;
@@ -78,33 +85,107 @@ h2, form, p{
     float:none;
     display: block;
     margin:0 auto;  
-    background-color: rebeccapurple;
+    background-color: white;
     max-height:max-content;
 }
 
 .search-area{
-   width:75%;
+   width:99%;
     margin:auto;
+    margin-top:10px;
     text-align: center;
    
     > *{
         display:inline-block;   
     }   
 
+    form{
+        font-size: 0;
+    }
+
+    .submitbtn{
+        background-color: rgb(60, 60, 255);
+        border-width: 0px;
+        color:white;
+        min-height: 33px;
+        min-width:150px;
+    }
+
     .search-box{
         min-width:300px;
-        min-height:25px;
-        border:2px solid rgba(128, 128, 128, 0.603);
+        min-height:36px;
+        border:3px solid rgba(29, 29, 29, 0.767);
+        border-right:none;
+    }
+
+    .category-btn{
+        min-height:36px;
+        min-width:100px;
+        margin-right:5px;
+        background-color: white;
+        border: 3px solid rgba(29, 29, 29, 0.767);
+        border-left: 1px solid rgba(29, 29, 29, 0.767);
+        color:black;
+    }
+
+    .advance-search{
+        font-size: x-small;
+        color:rgb(139, 139, 139);
+    }
+    p{
+        vertical-align:middle;
+        display:inline;
+        font-size: xx-large;
+    }
+    .E{
+        color:red;
+    }
+    .B{
+        color:blue;
+    }
+    .A{
+        color:rgb(182, 182, 42)
+    }
+    .Y{
+        color:greenyellow;
     }
 }
 
 .categories{
     padding-top:10px;
     margin-top:20px;
+    min-height:30px;
     border-top:1px solid rgba(0, 0, 0, 0.295);
     font-size:small;
     color:grey;
     text-align: center;
+}
+
+.main-slide{
+
+    .image-text{
+        position: absolute;
+        top:25%;
+        > *{
+            margin:5px 5px;
+        }
+
+    }
+
+    .slide-image{
+        background-image: url('https://static.wikia.nocookie.net/gundam/images/0/03/Rxuc-ova-ntd.jpg/revision/latest?cb=20160225044457');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    min-height:300px;
+    min-width:100%;
+    }
+    
+    h3{
+        font-weight: bold;
+        font-size:x-large;
+    }
+
 }
 
 .listings{
@@ -149,10 +230,8 @@ h2, form, p{
             text-align: left;
         }
       
-        button{
-            background-color: rgba(255, 255, 255, 0);
+        button{            
             border-color: rgba(201, 253, 122, 0.664);
-            border-width: 1px;
             width:50%;
             height:25px;
             color:rgba(195, 255, 104, 0.664);
@@ -209,15 +288,40 @@ h2, form, p{
 }
 
 footer{
+    margin-top:100px;
+    padding-top:50px;
+    border-top:solid 1px $border-color;
+    
+    div{  
+        max-width:max-content;
+        margin:0 auto;
+    }
     p{
         font-weight: bold;
         font-size: large;
     }
     ul{
-        @include grid-unit(3);
+        margin:20px 10px;
+        @include grid-unit(2);
     }
     li{
+        margin:0;
         float:none;
+        ul{
+          
+            margin:0;
+            margin-top:15px;
+        }
+    }
+    button{
+        color:white;
+    }
+
+
+    .copyright{
+        padding:20px 0;
+        font-size: x-small;
+        margin:0 auto;
     }
 }
 
