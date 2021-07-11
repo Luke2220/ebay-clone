@@ -9,6 +9,15 @@ button {
   border-width: 1px;
 }
 
+.full-border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.295);
+  float: left;
+  margin-right: 20px;
+  width: 2860px;
+  position: relative;
+  right: 500px;
+}
+
 .inblock {
   display: inline-block;
 }
@@ -51,6 +60,12 @@ nav img {
 nav .right-nav {
   float: right;
 }
+nav div {
+  float: left;
+  margin-right: 20px;
+  width: 940px;
+  margin-left: 25%;
+}
 
 h2, form, p {
   width: max-content;
@@ -59,7 +74,7 @@ h2, form, p {
 .container {
   float: left;
   margin-right: 20px;
-  width: 940px;
+  width: 1420px;
   float: none;
   display: block;
   margin: 0 auto;
@@ -125,17 +140,28 @@ h2, form, p {
 
 .categories {
   padding-top: 10px;
+  margin: 0 auto;
   margin-top: 20px;
   min-height: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.295);
+  border-top: 1px solid rgba(0, 0, 0, 0.466);
   font-size: small;
   color: grey;
-  text-align: center;
+  max-width: max-content;
 }
 
+.main-slide {
+  float: left;
+  margin-right: 20px;
+  width: 940px;
+  float: none;
+  margin: 0 auto;
+}
 .main-slide .image-text {
-  position: absolute;
-  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 300px;
 }
 .main-slide .image-text > * {
   margin: 5px 5px;
@@ -143,7 +169,7 @@ h2, form, p {
 .main-slide .slide-image {
   background-image: url("https://static.wikia.nocookie.net/gundam/images/0/03/Rxuc-ova-ntd.jpg/revision/latest?cb=20160225044457");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: right top;
   min-height: 300px;
   min-width: 100%;
 }
@@ -211,7 +237,11 @@ h2, form, p {
 
 .banner {
   min-height: 250px;
-  margin-top: 200px;
+  float: left;
+  margin-right: 20px;
+  width: 1180px;
+  float: none;
+  margin: 100px auto 0 auto;
 }
 .banner .make-cash {
   background-color: #356e8f;
@@ -220,7 +250,7 @@ h2, form, p {
   font-size: x-large;
   float: left;
   margin-right: 20px;
-  width: 300px;
+  width: 340px;
   min-height: inherit;
   margin: 0;
   padding-right: 20px;
@@ -244,7 +274,7 @@ h2, form, p {
 .banner .selling-img {
   float: left;
   margin-right: 20px;
-  width: 620px;
+  width: 820px;
   margin: 0;
   float: right;
   min-height: inherit;
@@ -268,7 +298,7 @@ footer ul {
   margin: 20px 10px;
   float: left;
   margin-right: 20px;
-  width: 140px;
+  width: 220px;
 }
 footer li {
   margin: 0;

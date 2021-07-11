@@ -3,7 +3,7 @@ $link-color: #1b1b1b;
 $border-color: rgba(0, 0, 0, 0.466);
 $btn-image-width:25px;
 $btn-image-height:25px;
-$column-width: 60px;
+$column-width: 100px;
 $gutter-width: 20px;
 $banner-height:250px;
 body{
@@ -30,6 +30,12 @@ button{
     background-color:rgba(255, 255, 240, 0);
     min-height:25px;
     border-width: 1px;
+}
+
+.full-border-top{
+    border-top:1px solid rgba(0, 0, 0, 0.295);
+    @include grid-unit(24);
+    @include pull(500px);
 }
 
 .inblock{
@@ -72,6 +78,10 @@ nav {
     }
    .right-nav{   
        float:right;
+   }
+   div{
+       @include grid-unit(8);
+       margin-left:25%;
    }
 
 }
@@ -153,19 +163,27 @@ h2, form, p{
 
 .categories{
     padding-top:10px;
+    margin: 0 auto;
     margin-top:20px;
     min-height:30px;
-    border-top:1px solid rgba(0, 0, 0, 0.295);
+    border-top: 1px solid $border-color;
     font-size:small;
     color:grey;
-    text-align: center;
+    max-width:max-content;
+    
 }
 
 .main-slide{
-
+    @include grid-unit(8);
+    float:none;
+    margin:0 auto;
+   
     .image-text{
-        position: absolute;
-        top:25%;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height:300px;
         > *{
             margin:5px 5px;
         }
@@ -175,7 +193,8 @@ h2, form, p{
     .slide-image{
         background-image: url('https://static.wikia.nocookie.net/gundam/images/0/03/Rxuc-ova-ntd.jpg/revision/latest?cb=20160225044457');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-position: right top;
+       
 
     min-height:300px;
     min-width:100%;
@@ -250,13 +269,17 @@ h2, form, p{
 
 .banner{
     min-height: $banner-height;
-   margin-top:200px;
+   
+   @include grid-unit(10);
+   float:none;
+   margin: 100px auto 0 auto;
+
     .make-cash{
         background-color: $ebay-color;
         color:lighten($ebay-color, 30%);
         font-weight: bold;
         font-size: x-large;
-        @include grid-unit(4);
+        @include grid-unit(3);
         min-height:inherit;
         margin:0;
         padding-right:20px;
@@ -279,7 +302,7 @@ h2, form, p{
         }
     }
     .selling-img{
-        @include grid-unit(8);
+        @include grid-unit(7);
         margin:0;
         float:right;
         min-height:inherit;
